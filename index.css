@@ -1,0 +1,120 @@
+
+:root {
+    --gradient-dark: #000428;
+    --gradient-light: #004e92;
+
+
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    /* background: linear-gradient(270deg,#B38A6B,#37291F) no-repeat; */
+    background: #000428;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, var(--gradient-light), var(--gradient-dark));  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, var(--gradient-light), var(--gradient-dark)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    color: whitesmoke;
+    font-family: sans-serif;
+    min-height: 100vh;
+
+}
+
+header {
+    font-size: 1.5rem;
+}
+
+header,
+form {
+    min-height: 20vh;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+form input, 
+form button {
+    padding: 0.5rem;
+    font-size: 2rem;
+    border: none;
+    background: whitesmoke;
+}
+
+form button {
+    color: #37291F;
+    background: whitesmoke;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form button:hover {
+    color: whitesmoke;
+    background:var(--gradient-dark);
+}
+
+/* Add some style to the todos */
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-list {
+    min-width: 30%;
+    list-style: none;
+}
+
+.todo {
+    margin: 0.5rem;
+    background: #DBE5FF;
+    color: black;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+
+.todo li {
+    flex: 1;
+}
+
+.trash-button,
+.complete-button {
+    background: var(--gradient-dark);
+    color: whitesmoke;
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.complete-button {
+    background: #0247FE;
+}
+
+.todo-item {
+    padding: 0 0.5rem;
+}
+
+.fa-trash,
+.fa-check {
+    pointer-events: none;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.fall {
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+
